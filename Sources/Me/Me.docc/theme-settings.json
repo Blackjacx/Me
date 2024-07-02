@@ -1,0 +1,19 @@
+{
+    "theme": {
+        "color": {
+            "primary": "#25252A",
+            "secondary": "#2A2B30",
+            "fill": {
+                "dark": "var(--color-primary)",
+                "light": "#FFFFFF"
+            },
+            "fill-secondary": {
+                "dark": "var(--color-secondary)",
+                "light": "#FFFFFF"
+            },
+            "documentation-intro-fill": "radial-gradient(circle at top, var(--color-fill-secondary) 30%, #151516 100%)",
+            "documentation-intro-accent": "var(--color-secondary)",
+            "nav-solid-background": "var(--color-fill-primary)"
+        }
+    }
+}

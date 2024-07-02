@@ -1,0 +1,82 @@
+name: Build & Deploy Website to GitHub Pages
+
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+  push:
+    branches: ["main"]
+
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Install Swift
+        uses: swift-actions/setup-swift@v2
+
+      # - name: Generate Metadata
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   run: swift run generate-metadata
+
+      - name: Build Documentation
+        run: |
+          swift package --allow-writing-to-directory ./docs \
+            generate-documentation --target Me \
+            --disable-indexing \
+            --hosting-base-path Me \
+            --transform-for-static-hosting \
+            --output-path ./docs
+
+      - name: Bypass Jekyll Processing
+        run: |
+          touch ./docs/.nojekyll
+
+      # - name: Override Favicons
+      #   run: |
+      #     rm ./docs/favicon.svg
+      #     rm ./docs/favicon.ico
+      #     cp ./favicon.ico ./docs/favicon.ico
+
+      - name: Create index.html for redirection
+        run: |
+          echo '<!DOCTYPE html>
+          <html lang="en">
+          <head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>Redirecting...</title>
+              <meta http-equiv="refresh" content="0; url=/Me/documentation/me/">
+              <script type="text/javascript">
+                  window.location.href = "/Me/documentation/me/";
+              </script>
+          </head>
+          <body>
+              <p>If you are not redirected automatically, follow this <a href="/Me/documentation/me/">Link</a>.</p>
+          </body>
+          </html>' > ./docs/index.html
+
+      - name: Deploy to Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: docs
