@@ -46,6 +46,14 @@ view the list of topics which you can find on this website.
     - <doc:Projects>
 }
 
+### 🔔 Contribution
+
+tbd
+
+- add contributors like [here](https://github.com/Blackjacx/Columbus#contributors)
+- add short instructions for how to write the markdown here
+- add quick instructions for how to submit a pull request here (including forking)
+
 ## Topics
 
 ### Essentials
