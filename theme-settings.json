@@ -2,7 +2,7 @@
     "theme": {
         "color": {
             "primary": "#25252A",
-            "secondary": "#2A2B30",
+            "secondary": "#555555",
             "header-text-primary": {
                 "dark": "#FFFFFF",
                 "light": "var(--color-primary)"
