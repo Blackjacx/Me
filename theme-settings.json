@@ -20,7 +20,14 @@
                 "light": "radial-gradient(circle at top, #FFFFFF 30%, #F8F6FA 100%)"
             },
             "documentation-intro-title": "var(--color-header-text)",
-            "documentation-intro-eyebrow": "var(--color-header-text)",
+
+            "documentation-intro-figure": "var(--color-header-text)",
+
+
+
+
+
+
             "documentation-intro-accent": "var(--color-secondary)",
             "nav-solid-background": "var(--color-fill-primary)"
         }
