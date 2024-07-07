@@ -17,7 +17,7 @@
                 "light": "#FFFFFF"
             },
             "documentation-intro-fill": {
-                "dark": "radial-gradient(circle at top, var(--color-secondary) 70%, #151516 100%)",
+                "dark": "radial-gradient(circle at top, var(--color-secondary) 30%, #151516 100%)",
                 "light": "radial-gradient(circle at top, #FFFFFF 30%, #F8F6FA 100%)"
             },
             "documentation-intro-eyebrow": "var(--color-text-secondary)",
