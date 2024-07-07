@@ -4,8 +4,8 @@
             "primary": "#25252A",
             "secondary": "#2A2B30",
             "header-text": {
-                "dark": "#FFFFFF"
-                "light": "var(--color-primary)",
+                "dark": "#FFFFFF",
+                "light": "var(--color-primary)"
             },
             "fill": {
                 "dark": "var(--color-primary)",
