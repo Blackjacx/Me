@@ -18,7 +18,7 @@
             },
             "fill-secondary": {
                 "dark": "var(--color-secondary)",
-                "light": "#FFFFFF"
+                "light": "#808080"
             },
             "documentation-intro-fill": {
                 "dark": "radial-gradient(circle at top, var(--color-secondary) 30%, #151516 100%)",
