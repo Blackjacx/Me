@@ -3,6 +3,15 @@
         "color": {
             "primary": "#25252A",
             "secondary": "#2A2B30",
+            "text-primary": {
+                "dark": "#FFFFFF",
+                "light": "#000000"
+            },
+            "text-secondary": "#808080",
+            "text-tertiary": {
+                "dark": "#333333",
+                "light": "#CCCCCC"
+            },
             "fill": {
                 "dark": "var(--color-primary)",
                 "light": "#FFFFFF"
@@ -11,8 +20,15 @@
                 "dark": "var(--color-secondary)",
                 "light": "#FFFFFF"
             },
-            "documentation-intro-fill": "radial-gradient(circle at top, var(--color-fill-secondary) 30%, #151516 100%)",
-            "documentation-intro-accent": "var(--color-secondary)",
+            "documentation-intro-fill": {
+                "dark": "radial-gradient(circle at top, var(--color-secondary) 30%, #151516 100%)",
+                "light": "radial-gradient(circle at top, #FFFFFF 30%, #F8F6FA 100%)"
+            },
+            "documentation-intro-eyebrow": "var(--color-text-secondary)",
+            "documentation-intro-accent": "var(--color-text-tertiary)",
+            "documentation-intro-title": "var(--color-text-primary)",
+            "documentation-intro-figure": "var(--color-text-primary)",
+
             "nav-solid-background": "var(--color-fill-primary)"
         }
     }
