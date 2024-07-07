@@ -2,7 +2,7 @@
     "theme": {
         "color": {
             "primary": "#25252A",
-            "secondary": "#555555",
+            "secondary": "#888888",
             "header-text-primary": {
                 "dark": "#FFFFFF",
                 "light": "var(--color-primary)"
@@ -31,7 +31,7 @@
 
 
 
-            "documentation-intro-accent": "var(--color-secondary)",
+            "documentation-intro-accent": "#2A2B30",
             "nav-solid-background": "var(--color-fill-primary)"
         }
     }
