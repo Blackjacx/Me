@@ -9,8 +9,8 @@
             },
             "text-secondary": "#808080",
             "text-tertiary": {
-                "dark": "#404040",
-                "light": "#BFBFBF"
+                "dark": "#333333",
+                "light": "#CCCCCC"
             },
             "fill": {
                 "dark": "var(--color-primary)",
