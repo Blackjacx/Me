@@ -43,6 +43,7 @@ view the list of topics which you can find on this website.
 
 @Links(visualStyle: detailedGrid) {
     - <doc:Development>
+    - <doc:Blog>
     - <doc:Projects>
 }
 
@@ -59,6 +60,7 @@ tbd
 ### Essentials
 
 - <doc:Development>
+- <doc:Blog>
 
 ### Software Projects
 
