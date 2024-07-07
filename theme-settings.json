@@ -8,6 +8,10 @@
                 "light": "#000000"
             },
             "text-secondary": "#808080",
+            "text-tertiary": {
+                "dark": "#404040",
+                "light": "#BFBFBF"
+            },
             "fill": {
                 "dark": "var(--color-primary)",
                 "light": "#FFFFFF"
