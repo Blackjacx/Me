@@ -21,7 +21,7 @@
                 "light": "radial-gradient(circle at top, #FFFFFF 30%, #F8F6FA 100%)"
             },
             "documentation-intro-eyebrow": "var(--color-text-secondary)",
-            "documentation-intro-accent": "var(--color-primary)",
+            "documentation-intro-accent": "var(--color-text-secondary)",
             "documentation-intro-title": "var(--color-text-primary)",
             "documentation-intro-figure": "var(--color-text-primary)",
 
