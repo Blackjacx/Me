@@ -2,15 +2,12 @@
     "theme": {
         "color": {
             "primary": "#25252A",
-            "secondary": "#888888",
+            "secondary": "#2A2B30",
             "header-text-primary": {
                 "dark": "#FFFFFF",
                 "light": "var(--color-primary)"
             },
-            "header-text-secondary": {
-                "dark": "#FFFFFF",
-                "light": "var(--color-secondary)"
-            },
+            "header-text-secondary": "#808080",
             "fill": {
                 "dark": "var(--color-primary)",
                 "light": "#FFFFFF"
@@ -31,7 +28,7 @@
 
 
 
-            "documentation-intro-accent": "#2A2B30",
+            "documentation-intro-accent": "var(--color-secondary)",
             "nav-solid-background": "var(--color-fill-primary)"
         }
     }
