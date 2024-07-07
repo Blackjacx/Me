@@ -1,5 +1,11 @@
 {
     "theme": {
+        "code": {
+            "border-radius": "2px",
+            "border-style": "solid",
+            "border-width": "2px",
+            "indentationWidth": 2
+        },
         "color": {
             "primary": "#25252A",
             "secondary": "#2A2B30",
@@ -18,7 +24,7 @@
             },
             "fill-secondary": {
                 "dark": "var(--color-secondary)",
-                "light": "#FFFFFF"
+                "light": "#F2F2F2"
             },
             "documentation-intro-fill": {
                 "dark": "radial-gradient(circle at top, var(--color-secondary) 30%, #151516 100%)",
