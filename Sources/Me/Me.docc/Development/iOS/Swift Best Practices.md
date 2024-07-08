@@ -137,6 +137,18 @@ To be able to use symbols in tests declare them as `internal` (no prefix) instea
 
 So it will become easier to track down future retain cycles that are caused by missing `[weak self]` in the closure definition. Just leave out `self` if it is not necessary. Also use the `self.` syntax to initially assign constructor parameters to their respective properties if they have the same name.
 
+#### Name closures according to what triggers them 
+
+I saw that closures have been named according to what they do, e.g.
+- `openMenuClosure`
+- `displayAccountScreenClosure`
+
+But closures are no functions. Instead they are more like delegates and we delegate because the delegating object does/should not know how to or it simply cannot perform a specific task. It only knows **how** to trigger it. Therefore better these closures should be named according to their trigger:
+- `onButtonTap` if we have a generic view which really just has a button
+- `onBottomButtonTap` if we have multiple buttons and the one in question is named `bottomButton`
+
+The reason behind all of this is because the action may be part of a reusable piece of code and that code should not know what happens when the action is triggered. This is a general rule of thumb when it comes to modularization/abstraction/reuse.
+
 #### Line Breaks
 
 Do not leave a blank line underneath a every function declaration. This results in more compact code blocks which can be perceived as **one** block easier.
