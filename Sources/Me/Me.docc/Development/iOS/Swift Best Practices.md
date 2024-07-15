@@ -59,10 +59,9 @@ If don't follow this rule, **F** depends on the target/module where the string i
 
 Having a unified pattern for naming selectors helps to make code understandable faster. The on\* pattern is also used in other programming languages like JavaScript.
 
-### Avoid assigning a function to a closure
+#### Avoid using function names for closure parameters
 
-Assigning a function to closure property creates a strong reference to the owner of the function potentially creating a retain cycle.
-Use a closure and weak references. Read more about that in [Article](https://www.marisibrothers.com/2017/04/memory-leak-in-swift-assigning-function.html).
+Using function names directly for closure parameters, creates a strong reference to the owner of the function potentially creating a retain cycle. Use a closure and weak references instead. Read more about that in [this article](https://www.marisibrothers.com/2017/04/memory-leak-in-swift-assigning-function.html).
 
 #### Avoid multiple statements in one line / long lines
 
