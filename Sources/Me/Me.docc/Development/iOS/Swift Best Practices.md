@@ -1,6 +1,6 @@
 # Swift Best Practices
 
-Here you can find coding guidelines which are battle tested over years. 
+Here you can find coding guidelines which are battle tested over years.
 
 ## Overview
 
@@ -137,13 +137,15 @@ To be able to use symbols in tests declare them as `internal` (no prefix) instea
 
 So it will become easier to track down future retain cycles that are caused by missing `[weak self]` in the closure definition. Just leave out `self` if it is not necessary. Also use the `self.` syntax to initially assign constructor parameters to their respective properties if they have the same name.
 
-#### Name closures according to what triggers them 
+#### Name closures according to what triggers them
 
 I saw that closures have been named according to what they do, e.g.
+
 - `openMenuClosure`
 - `displayAccountScreenClosure`
 
 But closures are no functions. Instead they are more like delegates and we delegate because the delegating object does/should not know how to or it simply cannot perform a specific task. It only knows **how** to trigger it. Therefore better these closures should be named according to their trigger:
+
 - `onButtonTap` if we have a generic view which really just has a button
 - `onBottomButtonTap` if we have multiple buttons and the one in question is named `bottomButton`
 
@@ -176,10 +178,18 @@ Do not use extensions for organizing/modularizing your code! Instead use `// MAR
 The advantages of this and specifically moving all protocols in the main object definition are:
 
 - the main class declaration shows all conformances of the class/struct
-- clean method list (`⌃+6`)
+- clean method list - triggered with `⌃ + 6`
 - a unified file structure results in less searching for symbols, very similar to the `func setup<view>()` convention
 
 See also the customizable SwiftLint rule [type_contents_order](https://realm.github.io/SwiftLint/type_contents_order.html).
+
+> **NOTE:** It is still very beneficial to put custom initializers in extensions
+> since this will enable Swift to generate an implicit initializer for your
+> object. Just imagine you have a struct with 20 properties. You don't want to
+> generate boilerplate code for this initializer which is created by Swift
+> implicitly anyways. Only when you need to make the initializer public it may be
+> necessary to explicitly implement it since the implicit one is `internal`. This
+> can only be circumvented by using the [PublicInit macro](https://twitter.com/tiborbodecs/status/1666190406025895937).
 
 #### Name bools with the pattern isState
 
@@ -204,10 +214,11 @@ Please check out the SwiftLint rule [line_length](https://realm.github.io/SwiftL
 #### Avoid typealias for Nested structs
 
 Typealiases have a bunch of advantages but for nested structs, this are the cons:
+
 1. When `⌘`-clicking the typealias, Xcode will take you to the alias. What you want instead is navigate to the original object.
-2. Quick-Open (`⌘ + ⇧ + o`) leads you to the typealias. You actually want the original object as suggestion. It also can happen that you end up with multiple suggestions of the same type in the quick-open dialog (one for the alias and one for the real object). 
+2. Quick-Open (`⌘ + ⇧ + o`) leads you to the typealias. You actually want the original object as suggestion. It also can happen that you end up with multiple suggestions of the same type in the quick-open dialog (one for the alias and one for the real object).
 3. When you add the same nested object under another parent struct, specifying the same aliases would be confusing. It could even lead to name-space conflicts, depending on where you declare them. In your codebase it hides the information which struct is actually meant.
-4. When you add a typealias for each nested struct, you would end up with tons of additional code on top of many files. 
+4. When you add a typealias for each nested struct, you would end up with tons of additional code on top of many files.
 
 For these reasons I advise against using typealiases for nested objects. If you use them because of line length issues, meanwhile there are nice formatting options in Xcode that streamline indentation (`⌃ + m` in combination with SwiftFormat works perfectly).
 
@@ -219,7 +230,7 @@ Scripts do not like whitespaces. Since we have a lot of automation by scripts, p
 
 ## Accessibility
 
- [This article](https://developer.apple.com/news/?id=v56qu1b3) by Apple is a good introduction and reference for how to use Voice Over.
+[This article](https://developer.apple.com/news/?id=v56qu1b3) by Apple is a good introduction and reference for how to use Voice Over.
 
 #### Use the accessibilityId of a view to make it identifiable in Unit/UI Tests or Voice Over announcements
 
