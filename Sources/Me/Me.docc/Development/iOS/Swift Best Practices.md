@@ -187,7 +187,7 @@ The advantages of this and specifically moving all protocols in the main object 
 
 See also the customizable SwiftLint rule [type_contents_order](https://realm.github.io/SwiftLint/type_contents_order.html).
 
-> **NOTE:** It is still very beneficial to put custom initializers in extensions
+> It is still very beneficial to put custom initializers in extensions
 > since this will enable Swift to generate an implicit initializer for your
 > object. Just imagine you have a struct with 20 properties. You don't want to
 > generate boilerplate code for this initializer which is created by Swift
