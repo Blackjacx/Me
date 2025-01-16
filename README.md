@@ -51,5 +51,6 @@ The idea for the workflow and the general structue has been taken from:
 - [How to document your project with DocC](https://www.hackingwithswift.com/articles/238/how-to-document-your-project-with-docc)
 - [Adding Structure to your Documentation Pages](https://developer.apple.com/documentation/Xcode/adding-structure-to-your-documentation-pages)
 - [Customizing The Appearance Of Your Documentation Pages](https://www.swift.org/documentation/docc/customizing-the-appearance-of-your-documentation-pages)
+- [Color Options Possible in `Sources/Me/Me.swift Sources/Me/Me.docc/theme-settings.json`](https://github.com/swiftlang/swift-docc/blob/77a46d580a100ed208b414396ae5bab703b69212/Sources/SwiftDocC/SwiftDocC.docc/Resources/ThemeSettings.spec.json#L197)
 - [Example of a fully customized documentation website](https://mportiz08.github.io/swift-docc/documentation/docc/) ([theme-settings.json file](https://mportiz08.github.io/swift-docc/theme-settings.json))
 
