@@ -26,10 +26,6 @@
         "dark": "var(--color-secondary)",
         "light": "#F2F2F2"
       },
-      "code-background": {
-        "dark": "#808080",
-        "light": "#808080"
-      },
       "documentation-intro-fill": {
         "dark": "radial-gradient(circle at top, var(--color-secondary) 30%, #151516 100%)",
         "light": "radial-gradient(circle at top, #FFFFFF 30%, #F8F6FA 100%)"
