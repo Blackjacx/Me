@@ -1,4 +1,4 @@
-# ASC
+# Weeks
 
 An app to remember your loved ones birthdays ot other important dates.
 
