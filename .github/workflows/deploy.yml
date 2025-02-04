@@ -44,7 +44,7 @@ jobs:
           swift package --allow-writing-to-directory ./docs \
             generate-documentation --target Me \
             --disable-indexing \
-            --hosting-base-path Me \
+            --hosting-base-path . \
             --transform-for-static-hosting \
             --output-path ./docs
 
@@ -58,7 +58,7 @@ jobs:
       #     rm ./docs/favicon.ico
       #     cp ./favicon.ico ./docs/favicon.ico
 
-      - name: Create index.html for redirection
+      - name: Override index.html for redirection to subfolder /documentation/me
         run: |
           echo '<!DOCTYPE html>
           <html lang="en">
@@ -66,13 +66,13 @@ jobs:
               <meta charset="UTF-8">
               <meta name="viewport" content="width=device-width, initial-scale=1.0">
               <title>Redirecting...</title>
-              <meta http-equiv="refresh" content="0; url=/Me/documentation/me/">
+              <meta http-equiv="refresh" content="0; url=/documentation/me/">
               <script type="text/javascript">
-                  window.location.href = "/Me/documentation/me/";
+                  window.location.href = "/documentation/me/";
               </script>
           </head>
           <body>
-              <p>If you are not redirected automatically, follow this <a href="/Me/documentation/me/">Link</a>.</p>
+              <p>If you are not redirected automatically, follow this <a href="/documentation/me/">Link</a>.</p>
           </body>
           </html>' > ./docs/index.html
 
