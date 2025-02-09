@@ -39,6 +39,9 @@ This project is built automatically using a GitHub actions. Once built the follo
 
 Then GitHub's integrated pages deployment is triggered which copies the content of that branch to the actual webserver.
 
+> [!note]
+> If you want to view the website locally you can just run `./deploy.sh generate Me && ./deploy.sh serve` which will generate the website and launch an HTTP server that lets you view the website at http://localhost:8080.
+
 ## Acknowledgements
 
 The idea for the workflow and the general structue has been taken from:

@@ -39,42 +39,9 @@ jobs:
       #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       #   run: swift run generate-metadata
 
-      - name: Build Documentation
+      - name: Generate Documentation
         run: |
-          swift package --allow-writing-to-directory ./docs \
-            generate-documentation --target Me \
-            --disable-indexing \
-            --hosting-base-path . \
-            --transform-for-static-hosting \
-            --output-path ./docs
-
-      - name: Bypass Jekyll Processing
-        run: |
-          touch ./docs/.nojekyll
-
-      # - name: Override Favicons
-      #   run: |
-      #     rm ./docs/favicon.svg
-      #     rm ./docs/favicon.ico
-      #     cp ./favicon.ico ./docs/favicon.ico
-
-      - name: Override index.html for redirection to subfolder /documentation/me
-        run: |
-          echo '<!DOCTYPE html>
-          <html lang="en">
-          <head>
-              <meta charset="UTF-8">
-              <meta name="viewport" content="width=device-width, initial-scale=1.0">
-              <title>Redirecting...</title>
-              <meta http-equiv="refresh" content="0; url=/documentation/me/">
-              <script type="text/javascript">
-                  window.location.href = "/documentation/me/";
-              </script>
-          </head>
-          <body>
-              <p>If you are not redirected automatically, follow this <a href="/documentation/me/">Link</a>.</p>
-          </body>
-          </html>' > ./docs/index.html
+          ./deploy.sh generate Me
 
       - name: Deploy to Pages
         uses: JamesIves/github-pages-deploy-action@v4
