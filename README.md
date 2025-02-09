@@ -16,7 +16,7 @@ The goal of this repository is to present all kinds of development resources I g
 
 This repository represents a Swift package whose sole purpose is to, fully automated, build a [Documentation Catalogue](https://www.swift.org/documentation/docc/adding-supplemental-content-to-a-documentation-catalog) using Apple's [DocC](https://www.swift.org/documentation/docc/). Each time something is pushed to `main` a static website is built and deployed to GitHub Pages by a [GitHub Action](./.github/workflows/deploy.yml). 
 
-This website is reachable under https://blackjacx.github.io/Me/.
+This website is reachable under https://www.stherold.com.
 
 The cool point here is that the combination of GitHub and DocC gives you a nice looking and highly customizable website. All for free 🤑
 
