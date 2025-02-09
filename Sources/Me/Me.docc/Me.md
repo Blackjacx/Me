@@ -1,6 +1,6 @@
 # ``Me``
 
-I'm Stefan and I'm glad you found the way to my personal development hub and 
+I'm Stefan and glad you found the way to my personal development hub and 
 portfolio. I love to create open source software, especially development 
 tools, to help other developers to be more productive.
 
