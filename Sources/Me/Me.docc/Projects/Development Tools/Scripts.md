@@ -3,10 +3,10 @@
 Tailored scripts to perform all kinds of automations.
 
 @Metadata {
-@CallToAction(
-purpose: link
-url: "https://github.com/Blackjacx/scripts",
-label: "GitHub")
+    @CallToAction(
+                  purpose: link
+                  url: "https://github.com/Blackjacx/scripts",
+                  label: "GitHub")
 }
 
 ## Overview
