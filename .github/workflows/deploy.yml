@@ -25,14 +25,14 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     steps:
       - name: Check out code
         uses: actions/checkout@v5
 
-      - name: Install Swift
-        uses: swift-actions/setup-swift@v2
+      # - name: Install Swift
+      #   uses: swift-actions/setup-swift@v2
       
       - name: Get swift version
         run: swift --version
