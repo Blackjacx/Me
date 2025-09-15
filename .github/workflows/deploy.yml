@@ -35,7 +35,7 @@ jobs:
         uses: swift-actions/setup-swift@v2
       
       - name: Get swift version
-          run: swift --version
+        run: swift --version
 
       # - name: Generate Metadata
       #   env:
@@ -43,8 +43,7 @@ jobs:
       #   run: swift run generate-metadata
 
       - name: Generate Documentation
-        run: |
-          ./deploy.sh generate Me
+        run: ./deploy.sh generate Me
 
       - name: Deploy to Pages
         uses: JamesIves/github-pages-deploy-action@v4
