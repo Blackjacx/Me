@@ -53,6 +53,7 @@ The diagram below shows the relationships between my projects.
 
 - <doc:Snap>
 - <doc:Push>
+- <doc:Scripts>
 
 ### GitHub Actions
 
